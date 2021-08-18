@@ -1,0 +1,11 @@
+name: Python pipeline
+on: [push]
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v2
+      -run: actions/upload-artifact@v2
+      with:
+        name: hello
+        path: .
